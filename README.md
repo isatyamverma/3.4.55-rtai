@@ -6,8 +6,7 @@ Sources and instructions to rebuild the debian.hybrid rtai kernel for Linuxcnc 2
 The 3.4-9-rtai.686.pae kernel in the debian.hybrid.iso distro of Linuxcnc is based upon the 3.4.55 kernel and
 an old version of the NTULINUX / ShabbyX RTAI repo
 
-Commands are preceded by a # charactor
-They assume the use of the root shell, which is the easiest way to build the kernel and RTAI
+Commands assume the use of the root shell, which is the easiest way to build the kernel and RTAI
 
 If you want to build Linuxcnc locally, then add your user to /etc/sudoers or the group sudo and proceed that way
 
@@ -49,12 +48,14 @@ Building
 This often produces rubbish that does not work, I always add new kernels by hand, so have an entry that reads similar to this with disc numbers and UUIDs amended to suit in /boot/grub/grub.cfg
 
 menuentry "sda3 3.4.55-rtai" --class gnu-linux --class gnu --class os {
+
     insmod part_msdos
     insmod ext2
     set root='(hd0,msdos3)'
     search --no-floppy --fs-uuid --set=root 135dd1b1-0c8b-46f5-9748-94eb75c21eae
     linux /boot/vmlinuz-3.4.55-rtai root=UUID=135dd1b1-0c8b-46f5-9748-94eb75c21eae
     initrd /boot/initrd.img-3.4.55-rtai
+    
 }
 
 
