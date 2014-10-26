@@ -1,0 +1,13 @@
+rtai (3.9) precise; urgency=low
+
+  * RTAI 3.9 by Paolo Mantegazza.
+
+ -- Sebastian Kuzminsky <seb@highlab.com>  Mon, 05 Aug 2013 23:28:40 -0600
+
+rtai (3.8.1-linuxcnc1) lucid; urgency=low
+
+  [ Moses McKnight ]
+  * Build on Lucid Lynx (10.04) / linux-image-2.6.32-122-rtai
+
+ -- Moses McKnight <moses@skytex.net>  Tue, 27 Jul 2010 19:57:34 -0500
+
