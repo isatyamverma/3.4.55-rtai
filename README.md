@@ -11,8 +11,6 @@ Commands assume the use of the root shell, which is the easiest way to build the
 If you want to build Linuxcnc locally, then add your user to /etc/sudoers or the group sudo and proceed that way
 
 The Linuxcnc build is a RIP build, which still leaves the original build of Linuxcnc able to be run as a system install
-with the swapping of realtime directories
-(eg rename /usr/realtime to /usr/realtime-rip and /usr/realtime-old to /usr/realtime then boot the original 3.4-9-rtai-686-pae kernel))
 
 Prerequisites
 *************
@@ -67,10 +65,6 @@ menuentry "sda3 3.4.55-rtai" --class gnu-linux --class gnu --class os {
 
 
 Reboot and select kernel 3.4.55-rtai
-
-Rename the existing realtime dir
-
-$ mv /usr/realtime /usr/realtime-old
 
 $ cd /usr/src/RTAI && ./autogen.sh && ./configure && make menuconfig
 
