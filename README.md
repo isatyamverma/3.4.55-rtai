@@ -39,15 +39,15 @@ Copy hal-linux-3.4.55-x86-1.patch to /usr/src/hal-linux-3.4.55-x86-1.patch
 Building
 ********
 
-# cd /usr/src/linux
+$ cd /usr/src/linux
 
-# patch -p1 < ../hal-linux-3.4.55-x86-1.patch
+$ patch -p1 < ../hal-linux-3.4.55-x86-1.patch
 
-# make menuconfig
+$ make menuconfig
 
         Now set local version suffix to -rtai and processor type and number of cores to match your machine
 
-# make -jN && make modules_install && make install
+$ make -jN && make modules_install && make install
 
         where N is the number of cores on your machine + 1
         
@@ -70,25 +70,25 @@ Reboot and select kernel 3.4.55-rtai
 
 Rename the existing realtime dir
 
-# mv /usr/realtime /usr/realtime-old
+$ mv /usr/realtime /usr/realtime-old
 
-# cd /usr/src/RTAI && ./autogen.sh && ./configure && make menuconfig
+$ cd /usr/src/RTAI && ./autogen.sh && ./configure && make menuconfig
 
         Now select correct number of cores and enable C99 support
 
-# make && make install
+$ make && make install
 
 Fetch the latest version of the master
 
-# cd /usr/src
-# git clone git://git.linuxcnc.org/git/linuxcnc.git linuxcnc-dev
+$ cd /usr/src
+$ git clone git://git.linuxcnc.org/git/linuxcnc.git linuxcnc-dev
 
 Build it
 
-# cd /usr/src/linuxcnc-dev/src && ./autogen.sh && ./configure && make && make setuid && cd ../ && . ./scripts/rip-enviroment
+$ cd /usr/src/linuxcnc-dev/src && ./autogen.sh && ./configure && make && make setuid && cd ../ && . ./scripts/rip-enviroment
 
 Then to run from that shell session 
 
-# linuxcnc
+$ linuxcnc
 
 
