@@ -14,6 +14,13 @@ The Linuxcnc build is a RIP build, which still leaves the original build of Linu
 with the swapping of realtime directories
 (eg rename /usr/realtime to /usr/realtime-rip and /usr/realtime-old to /usr/realtime then boot the original 3.4-9-rtai-686-pae kernel))
 
+Prerequisites
+*************
+
+build-essential debhelper kernel-package libpth-dev libgtk2.0-dev tcl8.5-dev tk8.5-dev bwidget python-old-doctools python-tk python-dev libglu1-mesa-dev libgtk2.0-dev 
+libgnomeprintui2.2-dev libncurses5-dev libxaw7-dev gettext libreadline-gplv2-dev lyx texlive-extra-utils imagemagick texinfo groff libmodbus-dev
+libudev-dev libmodbus-dev libboost-python-dev libboost-serialization-dev libboost-thread-dev libtk-img automake autoconf libtool libusb-dev automake1.11 libtool python-setuptools
+
 Initial setup
 *************
 
